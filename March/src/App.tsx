@@ -23,8 +23,9 @@ function Team({
 }) {
   return (
     <>
-      <h3>{school}</h3>
-      <h4>{name}</h4>
+    <h3>==================</h3>
+      <h3>{school} {name}</h3>
+      <h4></h4>
       <h4>
         {city}, {state}
       </h4>
@@ -32,12 +33,26 @@ function Team({
   );
 }
 
-
+function TeamList() {
+  return (
+    <>
+      {myData.teams.map((singleTeam) => (
+        <Team
+          school={singleTeam.school}
+          name={singleTeam.name}
+          city={singleTeam.city}
+          state={singleTeam.state}
+        />
+      ))}
+    </>
+  );
+}
 
 function App() {
   return (
     <>
       <Welcome />
+      <TeamList />
     </>
   );
 }
