@@ -1,7 +1,8 @@
 import "./App.css";
-import myData from "./CollegeBasketBallTeams.json";
+import myData from "./CollegeBasketBallTeams.json"; //Imports the JSON file
 
-function Welcome() {
+// A little welcome message
+function Welcome() { 
   return (
     <>
       <h1>March Madness is upon us</h1>
@@ -10,6 +11,7 @@ function Welcome() {
   );
 }
 
+// specifies what data types are used and returns a fragement
 function Team({
   school,
   name,
@@ -33,6 +35,7 @@ function Team({
   );
 }
 
+// pulls the data from the JSON, goes into the teams list and calls the Team function with each teams info
 function TeamList() {
   return (
     <>
@@ -48,6 +51,7 @@ function TeamList() {
   );
 }
 
+// master function that runs the Welcome and TeamList functions
 function App() {
   return (
     <>
